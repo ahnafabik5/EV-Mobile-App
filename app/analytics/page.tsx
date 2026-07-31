@@ -1,242 +1,208 @@
+import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import {
-  Earth,
+  Leaf,
   Trees,
-  Recycle,
-  Factory,
+  Cloud,
   Award,
-  Target,
 } from "lucide-react";
 
-export default function EnvironmentalPage() {
-  return (
-    <DashboardLayout>
 
-      <div className="space-y-8">
+export default function AnalyticsPage(){
 
-        {/* Hero */}
+return(
 
-        <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-700 px-4 sm:px-8 lg:px-12 py-14 text-white shadow-2xl">
+<DashboardLayout>
 
-          <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-white/10 blur-2xl"></div>
 
-          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-white/10 blur-xl"></div>
+<div className="space-y-6">
 
-          <div className="relative flex items-center justify-between">
 
-            <div>
+<h1 className="text-4xl font-black">
+Environmental Impact
+</h1>
 
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-100">
-                Environmental Impact
-              </p>
 
-              <h1 className="mt-2 text-4xl sm:text-5xl lg:text-7xl font-extrabold">
-                Green Future
-              </h1>
+<p className="text-gray-500">
+See how your EV helps the planet.
+</p>
 
-              <p className="mt-3 text-2xl">
-                Driving Towards Sustainable Transportation
-              </p>
 
-              <div className="mt-6 inline-flex rounded-full bg-white/20 px-6 py-3 font-semibold backdrop-blur">
-                🌱 Every Drive Makes a Difference
-              </div>
 
-            </div>
 
-            <div className="flex h-40 w-40 items-center justify-center rounded-full border border-white/20 bg-white/10">
 
-              <Earth
-                size={80}
-                strokeWidth={1.5}
-              />
+<section
+className="
+rounded-[32px]
+bg-gradient-to-br
+from-green-500
+to-emerald-700
+p-6
+text-white
+shadow-xl
+"
+>
 
-            </div>
 
-          </div>
+<div className="flex items-center gap-4">
 
-        </section>
 
-        {/* Statistics */}
+<div
+className="
+rounded-2xl
+bg-white/20
+p-4
+"
+>
 
-        <div className="grid gap-8 md:grid-cols-3">
+<Leaf size={40}/>
 
-          <Card
-            icon={<Earth size={40} className="text-blue-500" />}
-            title="EV Adoption"
-            value="14.8%"
-            desc="Estimated adoption in major cities."
-          />
+</div>
 
-          <Card
-            icon={<Factory size={40} className="text-orange-500" />}
-            title="CO₂ Saved"
-            value="248 KG"
-            desc="Carbon emission prevented."
-          />
 
-          <Card
-            icon={<Trees size={40} className="text-emerald-600" />}
-            title="Trees Saved"
-            value="11"
-            desc="Equivalent environmental impact."
-          />
 
-        </div>
-                {/* Sustainability */}
+<div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
 
-          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
+<p className="text-green-100">
+Green Score
+</p>
 
-            <h2 className="text-3xl font-bold text-slate-900">
-              Sustainability Goals
-            </h2>
 
-            <p className="mt-2 text-slate-500">
-              Track Bangladesh's green transportation initiatives.
-            </p>
+<h2 className="text-5xl font-black">
+96%
+</h2>
 
-            <div className="mt-8 space-y-5">
 
-              <Goal
-                icon={<Recycle className="text-emerald-600" />}
-                title="Reduce Fossil Fuel Usage"
-                status="On Track"
-              />
+</div>
 
-              <Goal
-                icon={<Trees className="text-emerald-600" />}
-                title="Cleaner Urban Air"
-                status="Improving"
-              />
 
-              <Goal
-                icon={<Target className="text-emerald-600" />}
-                title="2030 Green Transport Vision"
-                status="In Progress"
-              />
+</div>
 
-            </div>
 
-          </section>
+</section>
 
-          {/* Achievement */}
 
-          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-            <h2 className="text-3xl font-bold text-slate-900">
-              Achievement
-            </h2>
 
-            <div className="mt-10 flex flex-col items-center">
 
-              <Award
-                size={90}
-                className="text-yellow-500"
-              />
 
-              <h3 className="mt-6 text-3xl font-bold text-slate-900">
-                Green Driver
-              </h3>
 
-              <p className="mt-4 max-w-md text-center leading-7 text-slate-600">
-                Your driving habits help reduce emissions,
-                improve air quality and support a greener
-                future for Bangladesh.
-              </p>
 
-              <div className="mt-8 w-full">
+<div className="grid gap-4 sm:grid-cols-3">
 
-                <div className="mb-2 flex justify-between text-sm font-medium text-slate-600">
 
-                  <span>Eco Progress</span>
+<Card
+icon={<Cloud/>}
+title="CO₂ Saved"
+value="248 KG"
+/>
 
-                  <span>92%</span>
 
-                </div>
 
-                <div className="h-3 overflow-hidden rounded-full bg-gray-200">
+<Card
+icon={<Trees/>}
+title="Trees Equivalent"
+value="11"
+/>
 
-                  <div className="h-full w-[92%] rounded-full bg-emerald-600"></div>
 
-                </div>
 
-              </div>
+<Card
+icon={<Award/>}
+title="Achievement"
+value="Green Driver"
+/>
 
-            </div>
 
-          </section>
 
-        </div>
-              </div>
+</div>
 
-    </DashboardLayout>
 
-  );
+
+
+
+
+
+<Link
+
+href="/analytics/achievement"
+
+className="
+block
+rounded-xl
+bg-green-600
+p-4
+text-center
+font-bold
+text-white
+"
+
+>
+
+View Achievement
+
+</Link>
+
+
+
+
+</div>
+
+
+</DashboardLayout>
+
+
+)
+
 }
+
+
+
+
+
+
+
 function Card({
-  icon,
-  title,
-  value,
-  desc,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  value: string;
-  desc: string;
-}) {
-  return (
-    <div className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl">
+icon,
+title,
+value,
+}:{
+icon:React.ReactNode;
+title:string;
+value:string;
+}){
 
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50">
-        {icon}
-      </div>
 
-      <h2 className="mt-6 text-xl font-bold text-slate-900">
-        {title}
-      </h2>
+return(
 
-      <p className="mt-4 text-5xl font-extrabold tracking-tight text-emerald-600">
-        {value}
-      </p>
+<div
+className="
+rounded-3xl
+bg-white
+p-5
+shadow
+"
+>
 
-      <p className="mt-3 leading-7 text-slate-600">
-        {desc}
-      </p>
 
-    </div>
-  );
-}
+<div className="text-green-600">
+{icon}
+</div>
 
-function Goal({
-  icon,
-  title,
-  status,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  status: string;
-}) {
-  return (
-    <div className="flex items-center justify-between rounded-[24px] border border-slate-200 bg-white p-5 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
 
-      <div className="flex items-center gap-4">
+<h3 className="mt-4 font-bold">
+{title}
+</h3>
 
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100">
-          {icon}
-        </div>
 
-        <span className="text-lg font-semibold text-slate-800">
-          {title}
-        </span>
+<p className="mt-2 text-2xl font-black text-green-600">
+{value}
+</p>
 
-      </div>
 
-      <span className="rounded-full bg-green-100 px-4 py-2 font-semibold text-green-700">
-        {status}
-      </span>
+</div>
 
-    </div>
-  );
+)
+
 }

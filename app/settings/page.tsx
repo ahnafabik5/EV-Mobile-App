@@ -1,154 +1,152 @@
+import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import {
-  Settings,
-  Bell,
-  Moon,
-  MapPin,
-  BatteryCharging,
-  Globe,
-  Shield,
-  User,
+User,
+Bell,
+Shield,
+Lock,
 } from "lucide-react";
 
-const settings = [
-  {
-    title: "Dark Mode",
-    icon: Moon,
-  },
-  {
-    title: "Notifications",
-    icon: Bell,
-  },
-  {
-    title: "Location Access",
-    icon: MapPin,
-  },
-  {
-    title: "Battery Alerts",
-    icon: BatteryCharging,
-  },
-  {
-    title: "Charging Reminder",
-    icon: BatteryCharging,
-  },
-  {
-    title: "Language",
-    icon: Globe,
-  },
-  {
-    title: "Privacy",
-    icon: Shield,
-  },
-  {
-    title: "Account Security",
-    icon: User,
-  },
+
+const items=[
+
+{
+title:"Profile",
+desc:"Manage your personal information",
+icon:User,
+href:"/settings/profile",
+},
+
+
+{
+title:"Notifications",
+desc:"Control alerts and reminders",
+icon:Bell,
+href:"/settings/notifications",
+},
+
+
+{
+title:"Privacy",
+desc:"Manage your privacy settings",
+icon:Shield,
+href:"/settings/privacy",
+},
+
+
+{
+title:"Account Security",
+desc:"Protect your account",
+icon:Lock,
+href:"/settings/security",
+},
+
 ];
 
-export default function SettingsPage() {
-  return (
-    <DashboardLayout>
 
-      <div className="space-y-8">
 
-        {/* Hero */}
+export default function SettingsPage(){
 
-        <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-700 px-4 sm:px-8 lg:px-12 py-14 text-white shadow-2xl">
 
-          <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-white/10 blur-2xl"></div>
+return(
 
-          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-white/10 blur-xl"></div>
+<DashboardLayout>
 
-          <div className="relative flex items-center justify-between">
 
-            <div>
+<div className="space-y-6">
 
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-100">
-                Preferences
-              </p>
 
-              <h1 className="mt-2 text-4xl sm:text-5xl lg:text-7xl font-extrabold">
-                Settings
-              </h1>
+<h1 className="text-4xl font-black">
+Settings
+</h1>
 
-              <p className="mt-3 text-2xl">
-                Personalize Your EV Experience
-              </p>
 
-              <div className="mt-6 inline-flex rounded-full bg-white/20 px-6 py-3 font-semibold backdrop-blur">
-                ⚙ Smart Preferences Enabled
-              </div>
+<p className="text-gray-500">
+Customize your EV Care experience.
+</p>
 
-            </div>
 
-            <div className="flex h-40 w-40 items-center justify-center rounded-full border border-white/20 bg-white/10">
 
-              <Settings
-                size={80}
-                strokeWidth={1.5}
-              />
 
-            </div>
+<div className="space-y-4">
 
-          </div>
 
-        </section>
-                {/* Settings */}
+{
+items.map((item)=>{
 
-        <div className="grid gap-6 md:grid-cols-2">
+const Icon=item.icon;
 
-          {settings.map((item) => {
 
-            const Icon = item.icon;
+return(
 
-            return (
+<Link
 
-              <div
-                key={item.title}
-                className="flex items-center justify-between rounded-[28px] border border-slate-200 bg-white p-7 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
-              >
+key={item.title}
 
-                <div className="flex items-center gap-5">
+href={item.href}
 
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
+className="
+flex
+items-center
+gap-5
+rounded-3xl
+bg-white
+p-6
+shadow
+border
+transition
+hover:shadow-lg
+"
 
-                    <Icon
-                      size={26}
-                      className="text-emerald-600"
-                    />
+>
 
-                  </div>
 
-                  <div>
+<div className="
+rounded-2xl
+bg-green-100
+p-4
+text-green-600
+">
 
-                    <h2 className="text-xl font-bold text-slate-900">
-                      {item.title}
-                    </h2>
+<Icon/>
 
-                    <p className="mt-1 text-sm text-slate-500">
-                      Enabled
-                    </p>
+</div>
 
-                  </div>
 
-                </div>
 
-                <button className="rounded-full bg-emerald-600 px-6 py-2 font-semibold text-white transition duration-300 hover:bg-emerald-700">
+<div>
 
-                  ON
+<h2 className="text-xl font-bold">
+{item.title}
+</h2>
 
-                </button>
 
-              </div>
+<p className="text-gray-500">
+{item.desc}
+</p>
 
-            );
 
-          })}
+</div>
 
-        </div>
-              </div>
 
-    </DashboardLayout>
 
-  );
+</Link>
+
+)
+
+})
+
+}
+
+
+</div>
+
+
+</div>
+
+
+</DashboardLayout>
+
+)
+
 }

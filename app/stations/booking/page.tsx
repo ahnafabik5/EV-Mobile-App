@@ -5,17 +5,11 @@ import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 
 
-const problems=[
-"Battery Dead",
-"Flat Tire",
-"Accident",
-"Vehicle Breakdown",
-];
+export default function BookingPage(){
 
 
-export default function RoadsidePage(){
+const [slot,setSlot]=useState("");
 
-const [problem,setProblem]=useState("");
 
 
 return(
@@ -27,14 +21,8 @@ return(
 
 
 <h1 className="text-4xl font-black">
-Roadside Assistance
+Reserve Charging Slot
 </h1>
-
-
-<p className="text-gray-500">
-Get emergency help whenever you need it.
-</p>
-
 
 
 
@@ -50,35 +38,43 @@ border
 
 
 <h2 className="text-2xl font-bold">
-What happened?
+Gulshan Super Hub
 </h2>
 
 
+<p className="text-gray-500">
+DC Fast Charger • 120kW
+</p>
 
 
-<div className="mt-5 space-y-3">
+
+
+<div className="mt-6 grid gap-3">
 
 
 {
-problems.map((item)=>(
+[
+"10:00 AM",
+"12:00 PM",
+"3:00 PM",
+"6:00 PM"
+].map(time=>(
 
 
 <button
 
-key={item}
+key={time}
 
-onClick={()=>setProblem(item)}
+onClick={()=>setSlot(time)}
 
 className={`
-w-full
 rounded-xl
 border
 p-4
-text-left
-font-semibold
+font-bold
 
 ${
-problem===item
+slot===time
 ?
 "bg-green-600 text-white"
 :
@@ -89,7 +85,7 @@ problem===item
 
 >
 
-{item}
+{time}
 
 </button>
 
@@ -104,13 +100,12 @@ problem===item
 
 
 
-
 <Link
 
 href={
-problem
+slot
 ?
-"/roadside/confirm"
+"/stations/success"
 :
 "#"
 }
@@ -119,19 +114,17 @@ className="
 mt-6
 block
 rounded-xl
-bg-red-600
+bg-green-600
 p-4
 text-center
 font-bold
 text-white
 "
-
 >
 
-Request Help
+Confirm Charging
 
 </Link>
-
 
 
 
@@ -142,6 +135,7 @@ Request Help
 
 
 </DashboardLayout>
+
 
 )
 

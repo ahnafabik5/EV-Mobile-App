@@ -1,238 +1,184 @@
+import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import {
-  TrendingUp,
-  Fuel,
   Wallet,
-  CircleDollarSign,
-  Car,
-  Zap,
   Leaf,
+  TrendingDown,
+  Calculator,
 } from "lucide-react";
 
-export default function FuelPage() {
-  return (
-    <DashboardLayout>
-      <div className="space-y-8">
 
-        {/* Hero */}
+export default function FuelPage(){
 
-        <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-700 px-4 sm:px-8 lg:px-12 py-14 text-white shadow-2xl">
+return(
 
-          <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-white/10 blur-2xl"></div>
+<DashboardLayout>
 
-          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-white/10 blur-xl"></div>
 
-          <div className="relative flex items-center justify-between">
+<div className="space-y-6">
 
-            <div>
 
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-100">
-                Monthly Fuel Savings
-              </p>
+<h1 className="text-4xl font-black">
+Fuel Savings
+</h1>
 
-              <h1 className="mt-2 text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight leading-none">
-                ৳6,300
-              </h1>
 
-              <p className="mt-2 text-3xl font-semibold tracking-tight text-green-50">
-                Saved This Month
-              </p>
+<p className="text-gray-500">
+Track how much your EV saves every month.
+</p>
 
-              <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-white/20 px-6 py-3 text-sm font-semibold backdrop-blur-md">
-                ⚡ 72% Lower Running Cost
-              </div>
 
-            </div>
 
-            <div className="flex h-40 w-40 items-center justify-center rounded-full border border-white/20 bg-white/10">
 
-              <Wallet size={80} />
 
-            </div>
+<section
+className="
+rounded-[32px]
+bg-gradient-to-br
+from-green-500
+to-emerald-700
+p-6
+text-white
+shadow-xl
+"
+>
 
-          </div>
 
-        </section>
+<p className="text-green-100">
+Total Savings
+</p>
 
-        {/* Stats */}
 
-        <div className="grid gap-6 grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+<h2 className="mt-2 text-5xl font-black">
+৳45,000
+</h2>
 
-          <Card
-            icon={<Fuel className="text-orange-500" size={40} />}
-            title="Petrol Saved"
-            value="185 L"
-          />
 
-          <Card
-            icon={<Wallet className="text-emerald-600" size={40} />}
-            title="Monthly Savings"
-            value="৳6,300"
-          />
+<p className="mt-2">
+Saved by driving electric
+</p>
 
-          <Card
-            icon={<CircleDollarSign className="text-cyan-500" size={40} />}
-            title="Yearly Savings"
-            value="৳75,600"
-          />
 
-          <Card
-            icon={<TrendingUp className="text-purple-500" size={40} />}
-            title="Efficiency"
-            value="72%"
-          />
+</section>
 
-        </div>
 
-        {/* Cost Comparison */}
 
-        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900">
-            Cost Comparison
-          </h2>
 
-          <p className="mt-2 text-slate-500">
-            Compare monthly expenses between petrol and electric vehicles.
-          </p>
 
-          <div className="mt-8 space-y-4">
 
-            <Row
-              title="Petrol Vehicle / Month"
-              value="৳8,400"
-            />
+<div className="grid gap-4 sm:grid-cols-3">
 
-            <Row
-              title="Electric Vehicle / Month"
-              value="৳2,100"
-            />
 
-            <Row
-              title="Monthly Savings"
-              value="৳6,300"
-            />
+<Card
+icon={<Wallet/>}
+title="Monthly"
+value="৳3,500"
+/>
 
-            <Row
-              title="Annual Savings"
-              value="৳75,600"
-            />
 
-          </div>
+<Card
+icon={<TrendingDown/>}
+title="Fuel Avoided"
+value="120L"
+/>
 
-        </section>
 
-        {/* Tips */}
+<Card
+icon={<Leaf/>}
+title="CO₂ Saved"
+value="248 KG"
+/>
 
-        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-          <h2 className="text-3xl font-bold text-slate-900">
-            Smart Saving Tips
-          </h2>
+</div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
 
-            <Tip
-              icon={<Zap className="text-yellow-500" />}
-              title="Smart Charging"
-              desc="Charge during off-peak hours to reduce electricity cost."
-            />
 
-            <Tip
-              icon={<Leaf className="text-emerald-600" />}
-              title="Eco Driving"
-              desc="Smooth acceleration increases driving efficiency."
-            />
 
-            <Tip
-              icon={<Car className="text-blue-500" />}
-              title="Tyre Pressure"
-              desc="Maintain correct tyre pressure for maximum range."
-            />
 
-          </div>
 
-        </section>
+<Link
 
-      </div>
-    </DashboardLayout>
-  );
+href="/fuel/calculator"
+
+className="
+flex
+items-center
+justify-center
+gap-2
+rounded-xl
+bg-green-600
+p-4
+font-bold
+text-white
+"
+
+>
+
+<Calculator size={20}/>
+
+Savings Calculator
+
+</Link>
+
+
+
+
+</div>
+
+
+</DashboardLayout>
+
+
+)
+
 }
+
+
+
+
 
 function Card({
-  icon,
-  title,
-  value,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  value: string;
-}) {
-  return (
-    <div className="min-h-[240px] rounded-[30px] border border-slate-200 bg-white p-10 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+icon,
+title,
+value,
+}:{
+icon:React.ReactNode;
+title:string;
+value:string;
+}){
 
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50">
-        {icon}
-      </div>
 
-      <h2 className="mt-6 text-xl font-bold leading-tight tracking-tight text-slate-900">
-        {title}
-      </h2>
+return(
 
-      <p className="mt-4 whitespace-nowrap text-4xl font-extrabold tracking-tight leading-none text-emerald-600">
-        {value}
-      </p>
+<div
+className="
+rounded-3xl
+bg-white
+p-5
+shadow
+"
+>
 
-    </div>
-  );
-}
 
-function Row({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  return (
-    <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
+<div className="text-green-600">
+{icon}
+</div>
 
-      <span className="font-medium text-slate-600">
-        {title}
-      </span>
 
-      <span className="text-xl font-bold text-emerald-600">
-        {value}
-      </span>
+<h3 className="mt-4 font-bold">
+{title}
+</h3>
 
-    </div>
-  );
-}
 
-function Tip({
-  icon,
-  title,
-  desc,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  desc: string;
-}) {
-  return (
-    <div className="rounded-3xl border border-slate-200 bg-green-50 p-6">
+<p className="mt-2 text-2xl font-black text-green-600">
+{value}
+</p>
 
-      <div className="mb-5 text-3xl">
-        {icon}
-      </div>
 
-      <h3 className="text-xl font-bold text-slate-900">
-        {title}
-      </h3>
+</div>
 
-      <p className="mt-3 text-slate-600">
-        {desc}
-      </p>
+)
 
-    </div>
-  );
 }

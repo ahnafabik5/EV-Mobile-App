@@ -1,109 +1,179 @@
+import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import {
+  History,
   CheckCircle,
-  Calendar,
-  Wrench,
-  Receipt,
 } from "lucide-react";
 
-const history = [
-  {
-    service: "Battery Health Inspection",
-    date: "12 Jul 2026",
-    cost: "৳1,200",
-    status: "Completed",
-  },
-  {
-    service: "Brake Service",
-    date: "28 Jun 2026",
-    cost: "৳2,500",
-    status: "Completed",
-  },
-  {
-    service: "Software Update",
-    date: "14 Jun 2026",
-    cost: "Free",
-    status: "Completed",
-  },
-  {
-    service: "Tyre Rotation",
-    date: "05 Jun 2026",
-    cost: "৳900",
-    status: "Completed",
-  },
+
+const records=[
+
+{
+title:"Battery Inspection",
+date:"12 July 2026",
+status:"Completed",
+},
+
+{
+title:"Software Update",
+date:"20 May 2026",
+status:"Completed",
+},
+
+{
+title:"Full Vehicle Service",
+date:"15 March 2026",
+status:"Completed",
+},
+
 ];
 
-export default function HistoryPage() {
-  return (
-    <DashboardLayout>
 
-      <h1 className="text-5xl font-black">
-        Maintenance History
-      </h1>
+export default function HistoryPage(){
 
-      <p className="mt-2 text-gray-400">
-        Previous maintenance records and completed services.
-      </p>
 
-      <div className="mt-10 space-y-6">
+return(
 
-        {history.map((item) => (
+<DashboardLayout>
 
-          <div
-            key={item.service}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8"
-          >
 
-            <div className="flex items-start justify-between">
+<div className="space-y-6">
 
-              <div>
 
-                <h2 className="flex items-center gap-3 text-2xl font-bold">
+<h1 className="text-4xl font-black">
+Service History
+</h1>
 
-                  <Wrench size={22} />
 
-                  {item.service}
+<p className="text-gray-500">
+View your previous maintenance records.
+</p>
 
-                </h2>
 
-                <div className="mt-5 space-y-2 text-gray-400">
 
-                  <p className="flex items-center gap-2">
 
-                    <Calendar size={16} />
+<div className="space-y-5">
 
-                    {item.date}
 
-                  </p>
+{
+records.map((item)=>(
 
-                  <p className="flex items-center gap-2">
 
-                    <Receipt size={16} />
+<div
+key={item.title}
+className="
+rounded-3xl
+bg-white
+p-6
+shadow-lg
+border
+"
+>
 
-                    {item.cost}
 
-                  </p>
+<div className="flex items-center gap-4">
 
-                </div>
 
-              </div>
+<div
+className="
+rounded-2xl
+bg-green-100
+p-4
+text-green-600
+"
+>
 
-              <span className="flex items-center gap-2 rounded-full bg-green-500/20 px-4 py-2 text-green-400">
+<History/>
 
-                <CheckCircle size={18} />
+</div>
 
-                {item.status}
 
-              </span>
+<div>
 
-            </div>
+<h2 className="text-xl font-bold">
+{item.title}
+</h2>
 
-          </div>
 
-        ))}
+<p className="text-gray-500">
+{item.date}
+</p>
 
-      </div>
+</div>
 
-    </DashboardLayout>
-  );
+
+</div>
+
+
+
+
+<div className="
+mt-5
+flex
+items-center
+justify-between
+">
+
+
+<span
+className="
+flex
+items-center
+gap-2
+font-semibold
+text-green-600
+"
+>
+
+<CheckCircle size={18}/>
+
+{item.status}
+
+</span>
+
+
+
+
+<Link
+
+href="/history/details"
+
+className="
+rounded-xl
+bg-green-600
+px-5
+py-3
+font-bold
+text-white
+"
+
+>
+
+View Details
+
+</Link>
+
+
+
+</div>
+
+
+</div>
+
+
+))
+
+}
+
+
+</div>
+
+
+</div>
+
+
+</DashboardLayout>
+
+)
+
 }

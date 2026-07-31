@@ -3,85 +3,124 @@
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
+import BottomNav from "@/components/BottomNav";
 
-type Props = {
-  children: React.ReactNode;
+
+type Props={
+children:React.ReactNode;
 };
 
+
 export default function DashboardLayout({
-  children,
-}: Props) {
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-gray-100">
-
-      <Navbar
-        onMenuClick={() => setSidebarOpen(!sidebarOpen)}
-      />
+children
+}:Props){
 
 
-      <div className="mx-auto flex max-w-[1600px]">
-
-
-        {/* Desktop Sidebar */}
-
-        <aside className="hidden lg:block">
-
-          <Sidebar />
-
-        </aside>
+const [menuOpen,setMenuOpen]=useState(false);
 
 
 
-        {/* Mobile Sidebar Overlay */}
+return(
 
-        {sidebarOpen && (
+<div
+className="
+min-h-screen
+bg-gray-100
+pb-24
+lg:pb-0
+"
+>
 
-          <div
-            className="fixed inset-0 z-40 bg-black/40 lg:hidden"
-            onClick={() => setSidebarOpen(false)}
-          />
 
-        )}
-
-
-
-        {/* Mobile Sidebar */}
-
-        <aside
-          className={`
-            fixed left-0 top-0 z-50 h-full w-72
-            transform bg-white shadow-2xl
-            transition-transform duration-300
-            lg:hidden
-            ${
-              sidebarOpen
-                ? "translate-x-0"
-                : "-translate-x-full"
-            }
-          `}
-        >
-
-          <Sidebar />
-
-        </aside>
+<Navbar
+onMenuClick={()=>setMenuOpen(!menuOpen)}
+/>
 
 
 
-        {/* Content */}
+{/* Desktop Sidebar */}
 
-        <main className="min-w-0 flex-1 overflow-x-hidden p-4 sm:p-6 lg:p-8">
+<aside className="hidden lg:block fixed left-0 top-20 h-full">
 
-          {children}
+<Sidebar />
 
-        </main>
-
-
-      </div>
+</aside>
 
 
-    </div>
-  );
+
+
+
+{/* Mobile Sidebar */}
+
+{
+menuOpen && (
+
+<>
+
+<div
+className="
+fixed
+inset-0
+z-40
+bg-black/40
+lg:hidden
+"
+onClick={()=>setMenuOpen(false)}
+/>
+
+
+
+<aside
+className="
+fixed
+left-0
+top-0
+z-50
+h-full
+w-72
+bg-white
+shadow-xl
+lg:hidden
+"
+>
+
+<Sidebar />
+
+</aside>
+
+</>
+
+)
+
+}
+
+
+
+
+
+<main
+className="
+min-w-0
+p-4
+sm:p-6
+lg:ml-64
+lg:p-8
+"
+>
+
+{children}
+
+</main>
+
+
+
+
+<BottomNav />
+
+
+</div>
+
+
+)
+
 }
