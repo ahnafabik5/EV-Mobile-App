@@ -227,45 +227,50 @@ export default function DashboardPage() {
         {/* Insights */}
 
 
-        <section className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm">
+       {/* Insights */}
+
+<section className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm">
+
+  <details>
+
+    <summary className="cursor-pointer text-xl sm:text-2xl font-bold text-gray-900">
+      Vehicle Insights
+    </summary>
 
 
-          <h2 className="text-xl sm:text-2xl font-bold">
-            Vehicle Insights
-          </h2>
+    <div className="mt-6 grid grid-cols-2 gap-4">
 
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <Insight
+        title="Battery"
+        value="85%"
+      />
 
 
-            <Insight
-              title="Battery Temperature"
-              value="29°C"
-            />
+      <Insight
+        title="Range"
+        value="380 KM"
+      />
 
 
-            <Insight
-              title="Charging Cycles"
-              value="412"
-            />
+      <Insight
+        title="Health"
+        value="Excellent"
+      />
 
 
-            <Insight
-              title="AI Prediction"
-              value="Excellent"
-            />
+      <Insight
+        title="Service"
+        value="21 Days"
+      />
 
 
-            <Insight
-              title="Next Service"
-              value="21 Days"
-            />
+    </div>
 
 
-          </div>
+  </details>
 
-
-        </section>
+</section>
 
 
       </div>
@@ -372,14 +377,14 @@ function Insight({
 
  return (
 
-  <div className="rounded-2xl bg-green-50 p-5">
+  <div className="rounded-2xl bg-green-50 p-3">
 
     <p className="text-sm text-gray-500">
       {title}
     </p>
 
 
-    <h3 className="mt-3 text-2xl font-bold text-green-700 sm:text-3xl">
+   <h3 className="mt-2 text-xl font-bold text-green-700">
       {value}
     </h3>
 
