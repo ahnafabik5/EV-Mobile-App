@@ -41,7 +41,7 @@ backdrop-blur
 
 <img
 src="/car.jpg"
-alt="BYD Seal"
+alt="BYD ATTO 3"
 className="
 h-52
 w-full
@@ -76,7 +76,7 @@ tracking-tight
 sm:text-5xl
 "
 >
-BYD Seal
+BYD ATTO 3
 </h1>
 
 

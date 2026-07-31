@@ -1,8 +1,11 @@
 import Link from "next/link";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 import {
-  BatteryCharging,
-  Navigation,
-  Zap,
+Zap,
+Wrench,
+Car,
+BatteryCharging,
+Users,
 } from "lucide-react";
 
 
@@ -11,29 +14,113 @@ export default function Home(){
 
 return(
 
-<div
+<DashboardLayout>
+
+
+<div className="space-y-8">
+
+
+<section
 className="
-min-h-screen
-bg-gray-100
-p-5
-pb-28
+rounded-[45px]
+bg-gradient-to-br
+from-green-500
+to-emerald-800
+p-8
+text-white
+shadow-2xl
 "
 >
 
 
-
-{/* Header */}
-
-<div className="mb-6">
-
-<p className="text-sm text-gray-500">
-Welcome back
+<p className="text-green-100">
+Welcome to EV Care Bangladesh
 </p>
 
 
-<h1 className="text-3xl font-black text-gray-900">
-EV Care
+<h1 className="
+mt-3
+text-5xl
+font-black
+"
+>
+
+Drive The Future ⚡
+
 </h1>
+
+
+<p className="
+mt-4
+text-lg
+text-green-50
+"
+>
+
+Premium electric vehicle management platform.
+
+</p>
+
+
+
+<img
+
+src="/car.jpg"
+
+className="
+mt-8
+h-72
+w-full
+rounded-[35px]
+object-cover
+"
+
+alt="EV"
+
+/>
+
+
+</section>
+
+
+
+
+
+<div
+className="
+grid
+grid-cols-2
+gap-5
+"
+>
+
+
+<Action
+title="Charging"
+icon={<Zap/>}
+href="/stations"
+/>
+
+
+<Action
+title="About Us"
+icon={<Users/>}
+href="/about"
+/>
+
+
+<Action
+title="Service"
+icon={<Wrench/>}
+href="/service"
+/>
+
+
+<Action
+title="Battery"
+icon={<BatteryCharging/>}
+href="/battery"
+/>
 
 
 </div>
@@ -42,102 +129,22 @@ EV Care
 
 
 
-
-{/* Car Card */}
-
-
-<section
+<div
 className="
-overflow-hidden
-rounded-[35px]
-bg-gradient-to-br
-from-green-500
-to-green-700
-p-5
-text-white
+rounded-3xl
+bg-white
+p-6
 shadow-xl
 "
 >
 
-
-<img
-src="/car.jpg"
-alt="EV Car"
-className="
-h-64
-w-full
-rounded-[28px]
-object-cover
-"
-/>
-
-
-
-<div className="mt-5">
-
-
-<p className="text-sm text-green-100">
-Your Vehicle
-</p>
-
-
-<h2 className="text-4xl font-black">
-BYD Seal
+<h2 className="text-3xl font-black">
+Your EV Journey Starts Here
 </h2>
 
 
-<p className="mt-1 text-green-50">
-Premium Electric Sedan
-</p>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-{/* Status */}
-
-
-<div
-className="
-mt-6
-grid
-grid-cols-2
-gap-4
-"
->
-
-
-<div
-className="
-rounded-3xl
-bg-white
-p-5
-shadow-sm
-"
->
-
-<BatteryCharging
-className="text-green-600"
-/>
-
-
-<h3 className="mt-3 text-3xl font-black text-green-600">
-85%
-</h3>
-
-
-<p className="text-gray-500">
-Battery
+<p className="mt-3 text-gray-500">
+Monitor, maintain and optimize your electric vehicle.
 </p>
 
 
@@ -146,111 +153,66 @@ Battery
 
 
 
-
-<div
-className="
-rounded-3xl
-bg-white
-p-5
-shadow-sm
-"
->
-
-<Navigation
-className="text-green-600"
-/>
-
-
-<h3 className="mt-3 text-3xl font-black text-green-600">
-380 KM
-</h3>
-
-
-<p className="text-gray-500">
-Range
-</p>
-
-
 </div>
 
 
+</DashboardLayout>
 
-</div>
+)
 
-
-
-
-
+}
 
 
 
-{/* Quick Action */}
+
+function Action({
+title,
+icon,
+href
+}:any){
 
 
-<section
+return(
+
+<Link
+
+href={href}
+
 className="
-mt-6
 rounded-3xl
 bg-white
-p-5
-shadow-sm
+p-6
+shadow-lg
+hover:bg-green-50
+transition
 "
+
 >
 
 
-<h2 className="text-xl font-bold">
-Quick Actions
+<div className="text-green-600">
+{icon}
+</div>
+
+
+<h2 className="
+mt-4
+font-black
+text-xl
+"
+>
+
+{title}
+
 </h2>
 
 
+<p className="mt-2 text-green-600">
+Click →
+</p>
 
-<div className="mt-4 flex gap-3">
 
-
-<Link
-href="/stations"
-className="
-flex-1
-rounded-2xl
-bg-green-600
-p-4
-text-center
-font-bold
-text-white
-"
->
-<Zap className="mx-auto"/>
-Charge
 </Link>
-
-
-
-<Link
-href="/dashboard"
-className="
-flex-1
-rounded-2xl
-bg-gray-900
-p-4
-text-center
-font-bold
-text-white
-"
->
-Dashboard
-</Link>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-</div>
 
 )
 

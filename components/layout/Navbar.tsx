@@ -85,7 +85,7 @@ text-sm
 text-gray-500
 "
 >
-BYD Seal Owner • Dhaka
+BYD ATTO 3 Owner • Dhaka
 </p>
 
 

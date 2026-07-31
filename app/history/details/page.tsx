@@ -73,7 +73,7 @@ p-5
 
 <p>
 Vehicle:
-<b> BYD Seal</b>
+<b> BYD ATTO 3</b>
 </p>
 
 

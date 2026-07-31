@@ -6,34 +6,32 @@ import {
 Bell,
 BatteryCharging,
 Zap,
-Wrench,
+Wrench
 } from "lucide-react";
 
 
 const notifications=[
 
 {
-title:"Battery Health Check",
-desc:"Battery health is excellent",
-icon:BatteryCharging,
-href:"/battery",
+id:"battery",
+title:"Battery Health Alert",
+desc:"Battery performance update available",
+icon:BatteryCharging
 },
 
 {
+id:"charging",
 title:"Charging Reminder",
-desc:"Your vehicle needs charging",
-icon:Zap,
-href:"/stations",
+desc:"Your BYD ATTO 3 needs charging soon",
+icon:Zap
 },
-
 
 {
-title:"Service Due Soon",
-desc:"Maintenance in 21 days",
-icon:Wrench,
-href:"/maintenance",
-},
-
+id:"service",
+title:"Service Due",
+desc:"Vehicle maintenance is scheduled",
+icon:Wrench
+}
 
 ];
 
@@ -64,22 +62,30 @@ hover:bg-gray-100
 
 >
 
-<Bell
-className="text-green-600"
-/>
+<Bell className="text-green-600"/>
 
 
 <span
 className="
 absolute
-right-2
-top-2
-h-3
-w-3
+-right-1
+-top-1
+flex
+h-6
+w-6
+items-center
+justify-center
 rounded-full
 bg-red-500
+text-xs
+font-black
+text-white
 "
-/>
+>
+
+{notifications.length}
+
+</span>
 
 
 </button>
@@ -95,14 +101,14 @@ open && (
 className="
 absolute
 right-0
+top-14
 z-50
-mt-3
 w-80
 rounded-3xl
-border
 bg-white
-p-4
-shadow-xl
+p-5
+shadow-2xl
+border
 "
 >
 
@@ -120,24 +126,25 @@ Notifications
 
 
 
-
 <div className="space-y-3">
 
 
 {
-notifications.map((item)=>{
+notifications.map((n,index)=>{
 
 
-const Icon=item.icon;
+const Icon=n.icon;
 
 
 return(
 
 <Link
 
-key={item.title}
+key={n.id}
 
-href={item.href}
+href={`/notifications/${n.id}`}
+
+onClick={()=>setOpen(false)}
 
 className="
 flex
@@ -146,6 +153,7 @@ rounded-2xl
 bg-gray-50
 p-4
 hover:bg-green-50
+transition
 "
 
 >
@@ -153,6 +161,7 @@ hover:bg-green-50
 
 <div
 className="
+relative
 rounded-xl
 bg-green-100
 p-3
@@ -162,6 +171,29 @@ text-green-600
 
 <Icon/>
 
+
+<span
+className="
+absolute
+-right-2
+-top-2
+flex
+h-5
+w-5
+items-center
+justify-center
+rounded-full
+bg-red-500
+text-xs
+text-white
+"
+>
+
+{index+1}
+
+</span>
+
+
 </div>
 
 
@@ -170,23 +202,26 @@ text-green-600
 <div>
 
 <h3 className="font-bold">
-{item.title}
+{n.title}
 </h3>
 
 
 <p className="text-sm text-gray-500">
-{item.desc}
+{n.desc}
+</p>
+
+
+<p className="mt-2 text-green-600 font-bold">
+Click →
 </p>
 
 
 </div>
 
 
-
 </Link>
 
 )
-
 
 })
 
@@ -199,7 +234,6 @@ text-green-600
 
 </div>
 
-
 )
 
 }
@@ -207,6 +241,7 @@ text-green-600
 
 
 </div>
+
 
 )
 

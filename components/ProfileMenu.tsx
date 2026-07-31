@@ -123,7 +123,7 @@ Arif Hasan
 
 
 <p className="text-sm text-gray-500">
-BYD Seal
+BYD ATTO 3
 </p>
 
 

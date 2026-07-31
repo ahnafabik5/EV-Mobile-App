@@ -65,7 +65,7 @@ Select Vehicle
 </option>
 
 <option>
-BYD Seal
+BYD ATTO 3
 </option>
 
 <option>

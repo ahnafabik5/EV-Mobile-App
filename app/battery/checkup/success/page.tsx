@@ -62,7 +62,7 @@ p-5
 
 
 <p className="font-bold">
-BYD Seal
+BYD ATTO 3
 </p>
 
 

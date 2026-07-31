@@ -71,7 +71,7 @@ shadow-2xl
 
 src="/car.jpg"
 
-alt="BYD Seal"
+alt="BYD ATTO 3"
 
 className="
 h-64
@@ -99,7 +99,7 @@ text-4xl
 font-black
 ">
 
-BYD Seal
+BYD ATTO 3
 
 </h2>
 

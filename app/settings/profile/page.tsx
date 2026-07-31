@@ -149,7 +149,7 @@ Vehicle
 </p>
 
 <h3 className="font-bold">
-BYD Seal
+BYD ATTO 3
 </h3>
 
 </div>

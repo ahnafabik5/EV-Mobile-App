@@ -84,7 +84,7 @@ text-2xl
 font-black
 text-green-700
 ">
-BYD Seal
+BYD ATTO 3
 </p>
 
 
