@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root{
+  --bg:#F6F8F5;
+  --card:#FFFFFF;
+  --primary:#22C55E;
+  --secondary:#16A34A;
+  --border:#E5E7EB;
+  --text:#111827;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
