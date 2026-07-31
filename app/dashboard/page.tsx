@@ -1,396 +1,228 @@
 import DashboardLayout from "@/components/layout/DashboardLayout";
-import Link from "next/link";
-import {
-  BatteryCharging,
-  MapPinned,
-  Wrench,
-  ShieldCheck,
-  Car,
-  DollarSign,
-  Leaf,
-  Bell,
-} from "lucide-react";
 
-const actions = [
-  {
-    title: "Locate Charging",
-    icon: MapPinned,
-    href: "/stations",
-  },
-  {
-    title: "Book Service",
-    icon: Wrench,
-    href: "/service",
-  },
-  {
-    title: "Roadside Help",
-    icon: Car,
-    href: "/roadside",
-  },
-  {
-    title: "Battery Health",
-    icon: BatteryCharging,
-    href: "/battery",
-  },
-  {
-    title: "Fuel Savings",
-    icon: DollarSign,
-    href: "/fuel",
-  },
-  {
-    title: "Environment",
-    icon: Leaf,
-    href: "/analytics",
-  },
-  {
-    title: "Warranty",
-    icon: ShieldCheck,
-    href: "/warranty",
-  },
-  {
-    title: "Notifications",
-    icon: Bell,
-    href: "/settings",
-  },
-];
 
-export default function DashboardPage() {
-  return (
-    <DashboardLayout>
+export default function DashboardPage(){
 
-      <div className="space-y-8">
+return(
 
+<DashboardLayout>
 
-        {/* Vehicle Hero */}
+<div className="space-y-6">
 
-        <section className="rounded-[32px] bg-gradient-to-r from-green-500 to-green-600 p-5 sm:p-8 text-white shadow-xl">
 
+<section
+className="
+overflow-hidden
+rounded-[35px]
+bg-gradient-to-br
+from-emerald-400
+via-green-500
+to-green-700
+p-5
+text-white
+shadow-2xl
+sm:p-8
+"
+>
 
-          <div className="flex flex-col gap-6 md:flex-row md:items-center">
 
+{/* Car Image */}
 
-            <img
-              src="/car.jpg"
-              alt="BYD Seal"
-              className="h-52 w-full rounded-[25px] object-cover sm:h-64 md:h-[280px] md:max-w-[520px]"
-            />
+<div
+className="
+overflow-hidden
+rounded-[28px]
+bg-white/20
+p-3
+backdrop-blur
+"
+>
 
 
-            <div>
+<img
+src="/car.jpg"
+alt="BYD Seal"
+className="
+h-52
+w-full
+rounded-[22px]
+object-cover
+sm:h-64
+"
+/>
 
-              <p className="text-sm opacity-80">
-                Vehicle Profile
-              </p>
 
+</div>
 
-              <h1 className="mt-2 text-4xl font-bold sm:text-5xl">
-                BYD Seal
-              </h1>
 
 
-              <p className="mt-2 text-lg">
-                Premium Electric Sedan
-              </p>
+{/* Vehicle Info */}
 
+<div className="mt-6">
 
-              <div className="mt-5 inline-flex rounded-full bg-white/20 px-5 py-2 text-sm">
-                ✔ Verified Vehicle • Since 2025
-              </div>
 
+<p className="text-sm text-green-100">
+Vehicle Profile
+</p>
 
-            </div>
 
 
-          </div>
+<h1
+className="
+mt-2
+text-4xl
+font-black
+tracking-tight
+sm:text-5xl
+"
+>
+BYD Seal
+</h1>
 
 
 
-          {/* Stats */}
+<p className="mt-2 text-lg text-green-50">
+Premium Electric Sedan
+</p>
 
-          <div className="mt-8 grid grid-cols-2 gap-4 rounded-3xl bg-white p-5 shadow-xl md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
 
-            <Stat
-              value="85%"
-              title="Battery"
-            />
+<div
+className="
+mt-5
+inline-flex
+rounded-full
+bg-white/20
+px-5
+py-2
+text-sm
+font-semibold
+backdrop-blur
+"
+>
 
-            <Stat
-              value="380"
-              title="KM"
-            />
+✓ Verified Vehicle
 
-            <Stat
-              value="412"
-              title="Cycles"
-            />
+</div>
 
-            <Stat
-              value="2 Years"
-              title="Warranty"
-            />
 
+</div>
 
-          </div>
 
 
-        </section>
 
 
+{/* Stats */}
 
-        {/* Actions */}
+<div
+className="
+mt-8
+grid
+grid-cols-2
+gap-3
+rounded-[28px]
+bg-white
+p-4
+shadow-xl
+"
+>
 
 
-        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+<Stat
+title="Battery"
+value="85%"
+/>
 
 
-          {actions.map((item)=>{
+<Stat
+title="Range"
+value="380 KM"
+/>
 
-            const Icon=item.icon;
 
-            return (
+<Stat
+title="Cycles"
+value="412"
+/>
 
-              <Link
-                key={item.title}
-                href={item.href}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:border-green-500 hover:shadow-lg"
-              >
 
-                <Icon
-                  size={32}
-                  className="text-emerald-600"
-                />
+<Stat
+title="Warranty"
+value="2 Years"
+/>
 
 
-                <h2 className="mt-4 text-lg font-semibold text-slate-900">
-                  {item.title}
-                </h2>
 
+</div>
 
-                <p className="mt-2 text-sm font-medium text-emerald-600">
-                  Open →
-                </p>
 
-
-              </Link>
-
-            );
-
-          })}
-
-
-        </div>
-
-
-
-        {/* Charging */}
-
-
-        <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-md">
-
-
-          <h2 className="text-xl sm:text-2xl font-bold">
-            Nearby Charging Stations
-          </h2>
-
-
-          <div className="mt-6 space-y-4">
-
-            <Station
-              name="Gulshan Super Hub"
-              distance="2.1 KM"
-              status="6 Slots Available"
-            />
-
-
-            <Station
-              name="Bashundhara EV Point"
-              distance="4.8 KM"
-              status="4 Slots Available"
-            />
-
-
-            <Station
-              name="Uttara Fast Charger"
-              distance="7.3 KM"
-              status="8 Slots Available"
-            />
-
-
-          </div>
-
-
-        </section>
-
-
-
-        {/* Insights */}
-
-
-       {/* Insights */}
-
-<section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-md">
-
-  <details>
-
-    <summary className="cursor-pointer text-xl sm:text-2xl font-bold text-slate-900">
-      Vehicle Insights
-    </summary>
-
-
-    <div className="mt-6 grid grid-cols-2 gap-4">
-
-
-      <Insight
-        title="Battery"
-        value="85%"
-      />
-
-
-      <Insight
-        title="Range"
-        value="380 KM"
-      />
-
-
-      <Insight
-        title="Health"
-        value="Excellent"
-      />
-
-
-      <Insight
-        title="Service"
-        value="21 Days"
-      />
-
-
-    </div>
-
-
-  </details>
 
 </section>
 
 
-      </div>
+
+</div>
 
 
-    </DashboardLayout>
-  );
+</DashboardLayout>
+
+)
+
 }
+
+
+
 
 
 
 function Stat({
-  value,
-  title,
+title,
+value,
 }:{
-  value:string;
-  title:string;
+title:string;
+value:string;
 }){
 
-  return (
 
-    <div className="text-center">
+return(
 
-      <h2 className="text-2xl font-bold text-emerald-600 sm:text-3xl">
-        {value}
-      </h2>
-
-      <p className="text-sm text-slate-500">
-        {title}
-      </p>
-
-    </div>
-
-  );
-
-}
+<div
+className="
+rounded-2xl
+bg-green-50
+p-4
+text-center
+"
+>
 
 
-
-function Station({
-  name,
-  distance,
-  status,
-}:{
-  name:string;
-  distance:string;
-  status:string;
-}){
-
-  return (
-
-    <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 p-5 sm:flex-row sm:items-center sm:justify-between">
-
-
-      <div>
-
-        <h3 className="font-bold text-slate-900">
-          {name}
-        </h3>
-
-
-        <p className="mt-1 text-sm text-slate-500">
-          {distance}
-        </p>
-
-
-      </div>
-
-
-      <div className="sm:text-right">
-
-
-        <p className="text-sm font-semibold text-emerald-600">
-          {status}
-        </p>
-
-
-        <Link
-          href="/stations"
-          className="mt-3 inline-block rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white"
-        >
-          Reserve
-        </Link>
-
-
-      </div>
-
-
-    </div>
-
-  );
-
-}
+<h2
+className="
+text-2xl
+font-black
+text-emerald-600
+"
+>
+{value}
+</h2>
 
 
 
-function Insight({
- title,
- value,
-}:{
- title:string;
- value:string;
-}){
-
- return (
-
-  <div className="rounded-2xl bg-green-50 p-3">
-
-    <p className="text-sm text-slate-500">
-      {title}
-    </p>
+<p
+className="
+mt-1
+text-sm
+text-gray-500
+"
+>
+{title}
+</p>
 
 
-   <h3 className="mt-2 text-xl font-bold text-green-700">
-      {value}
-    </h3>
+
+</div>
 
 
-  </div>
-
- );
+)
 
 }
