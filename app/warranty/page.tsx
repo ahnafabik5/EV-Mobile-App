@@ -60,19 +60,19 @@ export default function WarrantyPage() {
         <div className="grid gap-8 md:grid-cols-3">
 
           <Card
-            icon={<ShieldCheck className="text-green-600" />}
+            icon={<ShieldCheck className="text-emerald-600" />}
             title="Status"
             value="Active"
           />
 
           <Card
-            icon={<Calendar className="text-green-600" />}
+            icon={<Calendar className="text-emerald-600" />}
             title="Expiry Date"
             value="18 Dec 2031"
           />
 
           <Card
-            icon={<BadgeCheck className="text-green-600" />}
+            icon={<BadgeCheck className="text-emerald-600" />}
             title="Coverage"
             value="Battery + Motor"
           />
@@ -80,13 +80,13 @@ export default function WarrantyPage() {
         </div>
                 {/* Included Coverage */}
 
-        <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-slate-900">
             Included Coverage
           </h2>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-slate-500">
             Your vehicle is protected under the manufacturer's premium warranty.
           </p>
 
@@ -105,15 +105,15 @@ export default function WarrantyPage() {
 
         {/* Warranty Progress */}
 
-        <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
           <div className="flex items-center justify-between">
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Warranty Progress
             </h2>
 
-            <span className="font-bold text-green-600">
+            <span className="font-bold text-emerald-600">
               78%
             </span>
 
@@ -125,7 +125,7 @@ export default function WarrantyPage() {
 
           </div>
 
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 text-slate-500">
             Approximately 2 years of warranty coverage remaining.
           </p>
 
@@ -133,23 +133,23 @@ export default function WarrantyPage() {
 
         {/* Download */}
 
-        <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
           <div className="flex items-center justify-between">
 
             <div>
 
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2 className="text-3xl font-bold text-slate-900">
                 Warranty Certificate
               </h2>
 
-              <p className="mt-2 text-gray-500">
+              <p className="mt-2 text-slate-500">
                 Download your official warranty document.
               </p>
 
             </div>
 
-            <button className="flex items-center gap-2 rounded-2xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700">
+            <button className="flex items-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700">
 
               <Download size={20} />
 
@@ -177,17 +177,17 @@ function Card({
   value: string;
 }) {
   return (
-    <div className="rounded-[30px] border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
       <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50">
         {icon}
       </div>
 
-      <h2 className="mt-6 text-xl font-bold text-gray-900">
+      <h2 className="mt-6 text-xl font-bold text-slate-900">
         {title}
       </h2>
 
-      <p className="mt-4 text-3xl font-extrabold leading-tight text-green-600">
+      <p className="mt-4 text-3xl font-extrabold leading-tight text-emerald-600">
         {value}
       </p>
 
@@ -201,18 +201,18 @@ function Coverage({
   title: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-5 transition hover:border-green-300 hover:bg-green-50">
+    <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-gray-50 p-5 transition hover:border-green-300 hover:bg-green-50">
 
       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100">
 
         <ShieldCheck
           size={22}
-          className="text-green-600"
+          className="text-emerald-600"
         />
 
       </div>
 
-      <span className="text-lg font-semibold text-gray-800">
+      <span className="text-lg font-semibold text-slate-800">
         {title}
       </span>
 

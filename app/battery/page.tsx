@@ -87,11 +87,11 @@ export default function BatteryPage() {
 
        <div className="grid gap-6 lg:grid-cols-3">
 
-  <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+  <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-md">
 
     <Thermometer className="text-orange-500" size={42} />
 
-    <h3 className="mt-5 text-xl font-bold text-gray-900">
+    <h3 className="mt-5 text-xl font-bold text-slate-900">
       Temperature
     </h3>
 
@@ -99,35 +99,35 @@ export default function BatteryPage() {
       29°C
     </p>
 
-    <p className="mt-2 text-gray-500">
+    <p className="mt-2 text-slate-500">
       Normal Operating Range
     </p>
 
   </div>
 
-  <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+  <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-md">
 
-    <Activity className="text-green-600" size={42} />
+    <Activity className="text-emerald-600" size={42} />
 
-    <h3 className="mt-5 text-xl font-bold text-gray-900">
+    <h3 className="mt-5 text-xl font-bold text-slate-900">
       Charge Cycles
     </h3>
 
-    <p className="mt-3 text-5xl font-black text-green-600">
+    <p className="mt-3 text-5xl font-black text-emerald-600">
       412
     </p>
 
-    <p className="mt-2 text-gray-500">
+    <p className="mt-2 text-slate-500">
       Healthy Battery Usage
     </p>
 
   </div>
 
-  <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
+  <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-md">
 
     <Zap className="text-yellow-500" size={42} />
 
-    <h3 className="mt-5 text-xl font-bold text-gray-900">
+    <h3 className="mt-5 text-xl font-bold text-slate-900">
       Charging Speed
     </h3>
 
@@ -135,7 +135,7 @@ export default function BatteryPage() {
       120kW
     </p>
 
-    <p className="mt-2 text-gray-500">
+    <p className="mt-2 text-slate-500">
       DC Fast Charging
     </p>
 
@@ -145,7 +145,7 @@ export default function BatteryPage() {
 
       </div>
 
-      <div className="mt-10 rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+      <div className="mt-10 rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
         <div className="flex items-center gap-4">
             <div className="flex items-center justify-between">
@@ -153,16 +153,16 @@ export default function BatteryPage() {
   <div className="flex items-center gap-4">
 
     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-100">
-      <Cpu className="text-green-600" size={26} />
+      <Cpu className="text-emerald-600" size={26} />
     </div>
 
     <div>
 
-      <h2 className="text-3xl font-bold text-gray-900">
+      <h2 className="text-3xl font-bold text-slate-900">
         AI Battery Prediction
       </h2>
 
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-slate-500">
         Intelligent health analysis powered by AI
       </p>
 
@@ -222,17 +222,17 @@ function Prediction({
   value: string;
 }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
+    <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
 
       <div>
 
-        <p className="text-sm font-medium text-gray-500">
+        <p className="text-sm font-medium text-slate-500">
           {title}
         </p>
 
       </div>
 
-      <span className="text-xl font-bold text-green-600">
+      <span className="text-xl font-bold text-emerald-600">
         {value}
       </span>
 

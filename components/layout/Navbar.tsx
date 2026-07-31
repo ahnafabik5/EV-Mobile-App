@@ -16,7 +16,7 @@ export default function Navbar({
 }: Props) {
 
   return (
-    <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
 
       <div className="flex h-20 items-center justify-between px-4 md:px-8">
 
@@ -30,7 +30,7 @@ export default function Navbar({
 
           <button
             onClick={onMenuClick}
-            className="rounded-xl border border-gray-200 p-3 hover:bg-gray-100 lg:hidden"
+            className="rounded-xl border border-slate-200 p-3 hover:bg-gray-100 lg:hidden"
           >
 
             <Menu size={24} />
@@ -40,11 +40,11 @@ export default function Navbar({
 
           <div>
 
-            <h2 className="text-xl md:text-3xl font-bold text-gray-900">
+            <h2 className="text-xl md:text-3xl font-bold text-slate-900">
               Dashboard
             </h2>
 
-            <p className="hidden text-sm text-gray-500 sm:block">
+            <p className="hidden text-sm text-slate-500 sm:block">
               Welcome back to EV Care
             </p>
 
@@ -75,12 +75,12 @@ export default function Navbar({
 
               className="
               w-72 rounded-xl
-              border border-gray-200
+              border border-slate-200
               bg-white
               py-3 pl-11 pr-4
-              text-gray-800
+              text-slate-800
               outline-none
-              shadow-sm
+              shadow-md
               focus:border-green-500
               "
 
@@ -92,7 +92,7 @@ export default function Navbar({
 
           {/* Notification */}
 
-          <button className="rounded-xl border border-gray-200 p-3 hover:bg-gray-100">
+          <button className="rounded-xl border border-slate-200 p-3 hover:bg-gray-100">
 
             <Bell size={22} />
 
@@ -106,7 +106,7 @@ export default function Navbar({
 
             <UserCircle
               size={38}
-              className="text-green-600"
+              className="text-emerald-600"
             />
 
           </button>

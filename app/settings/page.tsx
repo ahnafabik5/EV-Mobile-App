@@ -105,7 +105,7 @@ export default function SettingsPage() {
 
               <div
                 key={item.title}
-                className="flex items-center justify-between rounded-[28px] border border-gray-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
+                className="flex items-center justify-between rounded-[28px] border border-slate-200 bg-white p-7 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
               >
 
                 <div className="flex items-center gap-5">
@@ -114,18 +114,18 @@ export default function SettingsPage() {
 
                     <Icon
                       size={26}
-                      className="text-green-600"
+                      className="text-emerald-600"
                     />
 
                   </div>
 
                   <div>
 
-                    <h2 className="text-xl font-bold text-gray-900">
+                    <h2 className="text-xl font-bold text-slate-900">
                       {item.title}
                     </h2>
 
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-slate-500">
                       Enabled
                     </p>
 
@@ -133,7 +133,7 @@ export default function SettingsPage() {
 
                 </div>
 
-                <button className="rounded-full bg-green-600 px-6 py-2 font-semibold text-white transition duration-300 hover:bg-green-700">
+                <button className="rounded-full bg-emerald-600 px-6 py-2 font-semibold text-white transition duration-300 hover:bg-emerald-700">
 
                   ON
 

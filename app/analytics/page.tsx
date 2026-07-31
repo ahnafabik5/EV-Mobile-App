@@ -76,7 +76,7 @@ export default function EnvironmentalPage() {
           />
 
           <Card
-            icon={<Trees size={40} className="text-green-600" />}
+            icon={<Trees size={40} className="text-emerald-600" />}
             title="Trees Saved"
             value="11"
             desc="Equivalent environmental impact."
@@ -87,32 +87,32 @@ export default function EnvironmentalPage() {
 
         <div className="grid gap-8 lg:grid-cols-2">
 
-          <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Sustainability Goals
             </h2>
 
-            <p className="mt-2 text-gray-500">
+            <p className="mt-2 text-slate-500">
               Track Bangladesh's green transportation initiatives.
             </p>
 
             <div className="mt-8 space-y-5">
 
               <Goal
-                icon={<Recycle className="text-green-600" />}
+                icon={<Recycle className="text-emerald-600" />}
                 title="Reduce Fossil Fuel Usage"
                 status="On Track"
               />
 
               <Goal
-                icon={<Trees className="text-green-600" />}
+                icon={<Trees className="text-emerald-600" />}
                 title="Cleaner Urban Air"
                 status="Improving"
               />
 
               <Goal
-                icon={<Target className="text-green-600" />}
+                icon={<Target className="text-emerald-600" />}
                 title="2030 Green Transport Vision"
                 status="In Progress"
               />
@@ -123,9 +123,9 @@ export default function EnvironmentalPage() {
 
           {/* Achievement */}
 
-          <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Achievement
             </h2>
 
@@ -136,11 +136,11 @@ export default function EnvironmentalPage() {
                 className="text-yellow-500"
               />
 
-              <h3 className="mt-6 text-3xl font-bold text-gray-900">
+              <h3 className="mt-6 text-3xl font-bold text-slate-900">
                 Green Driver
               </h3>
 
-              <p className="mt-4 max-w-md text-center leading-7 text-gray-600">
+              <p className="mt-4 max-w-md text-center leading-7 text-slate-600">
                 Your driving habits help reduce emissions,
                 improve air quality and support a greener
                 future for Bangladesh.
@@ -148,7 +148,7 @@ export default function EnvironmentalPage() {
 
               <div className="mt-8 w-full">
 
-                <div className="mb-2 flex justify-between text-sm font-medium text-gray-600">
+                <div className="mb-2 flex justify-between text-sm font-medium text-slate-600">
 
                   <span>Eco Progress</span>
 
@@ -158,7 +158,7 @@ export default function EnvironmentalPage() {
 
                 <div className="h-3 overflow-hidden rounded-full bg-gray-200">
 
-                  <div className="h-full w-[92%] rounded-full bg-green-600"></div>
+                  <div className="h-full w-[92%] rounded-full bg-emerald-600"></div>
 
                 </div>
 
@@ -187,21 +187,21 @@ function Card({
   desc: string;
 }) {
   return (
-    <div className="rounded-[30px] border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl">
+    <div className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl">
 
       <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50">
         {icon}
       </div>
 
-      <h2 className="mt-6 text-xl font-bold text-gray-900">
+      <h2 className="mt-6 text-xl font-bold text-slate-900">
         {title}
       </h2>
 
-      <p className="mt-4 text-5xl font-extrabold tracking-tight text-green-600">
+      <p className="mt-4 text-5xl font-extrabold tracking-tight text-emerald-600">
         {value}
       </p>
 
-      <p className="mt-3 leading-7 text-gray-600">
+      <p className="mt-3 leading-7 text-slate-600">
         {desc}
       </p>
 
@@ -219,7 +219,7 @@ function Goal({
   status: string;
 }) {
   return (
-    <div className="flex items-center justify-between rounded-[24px] border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
+    <div className="flex items-center justify-between rounded-[24px] border border-slate-200 bg-white p-5 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
 
       <div className="flex items-center gap-4">
 
@@ -227,7 +227,7 @@ function Goal({
           {icon}
         </div>
 
-        <span className="text-lg font-semibold text-gray-800">
+        <span className="text-lg font-semibold text-slate-800">
           {title}
         </span>
 

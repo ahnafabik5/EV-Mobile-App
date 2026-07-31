@@ -30,15 +30,15 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky top-0 h-screen w-64 border-r border-gray-200 bg-white">
+    <aside className="sticky top-0 h-screen w-64 border-r border-slate-200 bg-white">
 
-      <div className="border-b border-gray-200 p-6">
+      <div className="border-b border-slate-200 p-6">
 
         <h1 className="text-2xl font-bold text-green-700">
           EV Care
         </h1>
 
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-slate-500">
           Smart Mobility
         </p>
 
@@ -56,7 +56,7 @@ export default function Sidebar() {
               href={item.href}
               className={`flex items-center gap-4 rounded-2xl px-4 py-4 transition ${
                 active
-                  ? "bg-green-600 text-white shadow-lg"
+                  ? "bg-emerald-600 text-white shadow-lg"
                   : "text-gray-700 hover:bg-green-50"
               }`}
             >

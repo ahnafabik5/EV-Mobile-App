@@ -65,7 +65,7 @@ export default function FuelPage() {
           />
 
           <Card
-            icon={<Wallet className="text-green-600" size={40} />}
+            icon={<Wallet className="text-emerald-600" size={40} />}
             title="Monthly Savings"
             value="৳6,300"
           />
@@ -86,13 +86,13 @@ export default function FuelPage() {
 
         {/* Cost Comparison */}
 
-        <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-          <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+          <h2 className="text-4xl font-extrabold tracking-tight text-slate-900">
             Cost Comparison
           </h2>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-slate-500">
             Compare monthly expenses between petrol and electric vehicles.
           </p>
 
@@ -124,9 +124,9 @@ export default function FuelPage() {
 
         {/* Tips */}
 
-        <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+        <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-slate-900">
             Smart Saving Tips
           </h2>
 
@@ -139,7 +139,7 @@ export default function FuelPage() {
             />
 
             <Tip
-              icon={<Leaf className="text-green-600" />}
+              icon={<Leaf className="text-emerald-600" />}
               title="Eco Driving"
               desc="Smooth acceleration increases driving efficiency."
             />
@@ -169,17 +169,17 @@ function Card({
   value: string;
 }) {
   return (
-    <div className="min-h-[240px] rounded-[30px] border border-gray-200 bg-white p-10 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="min-h-[240px] rounded-[30px] border border-slate-200 bg-white p-10 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
       <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-50">
         {icon}
       </div>
 
-      <h2 className="mt-6 text-xl font-bold leading-tight tracking-tight text-gray-900">
+      <h2 className="mt-6 text-xl font-bold leading-tight tracking-tight text-slate-900">
         {title}
       </h2>
 
-      <p className="mt-4 whitespace-nowrap text-4xl font-extrabold tracking-tight leading-none text-green-600">
+      <p className="mt-4 whitespace-nowrap text-4xl font-extrabold tracking-tight leading-none text-emerald-600">
         {value}
       </p>
 
@@ -195,13 +195,13 @@ function Row({
   value: string;
 }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
+    <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
 
-      <span className="font-medium text-gray-600">
+      <span className="font-medium text-slate-600">
         {title}
       </span>
 
-      <span className="text-xl font-bold text-green-600">
+      <span className="text-xl font-bold text-emerald-600">
         {value}
       </span>
 
@@ -219,17 +219,17 @@ function Tip({
   desc: string;
 }) {
   return (
-    <div className="rounded-3xl border border-gray-200 bg-green-50 p-6">
+    <div className="rounded-3xl border border-slate-200 bg-green-50 p-6">
 
       <div className="mb-5 text-3xl">
         {icon}
       </div>
 
-      <h3 className="text-xl font-bold text-gray-900">
+      <h3 className="text-xl font-bold text-slate-900">
         {title}
       </h3>
 
-      <p className="mt-3 text-gray-600">
+      <p className="mt-3 text-slate-600">
         {desc}
       </p>
 

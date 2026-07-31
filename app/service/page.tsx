@@ -71,23 +71,23 @@ export default function ServicePage() {
         <div className="grid gap-8 lg:grid-cols-2">
                   {/* Booking Form */}
 
-          <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-            <h2 className="mb-8 text-3xl font-bold text-gray-900">
+            <h2 className="mb-8 text-3xl font-bold text-slate-900">
               Book Appointment
             </h2>
 
             <input
               placeholder="Vehicle Name"
-              className="mb-5 w-full rounded-2xl border border-gray-200 bg-white p-4 text-gray-800 outline-none focus:border-green-500"
+              className="mb-5 w-full rounded-2xl border border-slate-200 bg-white p-4 text-slate-800 outline-none focus:border-green-500"
             />
 
             <input
               placeholder="Preferred Date"
-              className="mb-5 w-full rounded-2xl border border-gray-200 bg-white p-4 text-gray-800 outline-none focus:border-green-500"
+              className="mb-5 w-full rounded-2xl border border-slate-200 bg-white p-4 text-slate-800 outline-none focus:border-green-500"
             />
 
-            <select className="mb-5 w-full rounded-2xl border border-gray-200 bg-white p-4 text-gray-800">
+            <select className="mb-5 w-full rounded-2xl border border-slate-200 bg-white p-4 text-slate-800">
 
               <option>Battery Inspection</option>
 
@@ -101,7 +101,7 @@ export default function ServicePage() {
 
             </select>
 
-            <button className="w-full rounded-2xl bg-green-600 py-4 text-lg font-bold text-white transition hover:bg-green-700">
+            <button className="w-full rounded-2xl bg-emerald-600 py-4 text-lg font-bold text-white transition hover:bg-emerald-700">
 
               Confirm Booking
 
@@ -111,9 +111,9 @@ export default function ServicePage() {
 
           {/* Service Centers */}
 
-          <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+          <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Available Centers
             </h2>
 
@@ -122,20 +122,20 @@ export default function ServicePage() {
 
   <div
     key={center.name}
-    className="rounded-3xl border border-gray-200 bg-gray-50 p-6 transition duration-300 hover:border-green-300 hover:bg-green-50 hover:shadow-lg"
+    className="rounded-3xl border border-slate-200 bg-gray-50 p-6 transition duration-300 hover:border-green-300 hover:bg-green-50 hover:shadow-lg"
   >
 
-    <h3 className="text-2xl font-bold text-gray-900">
+    <h3 className="text-2xl font-bold text-slate-900">
       {center.name}
     </h3>
 
-    <div className="mt-5 space-y-3 text-gray-600">
+    <div className="mt-5 space-y-3 text-slate-600">
 
       <p className="flex items-center gap-2">
 
         <MapPin
           size={18}
-          className="text-green-600"
+          className="text-emerald-600"
         />
 
         {center.location}
@@ -146,7 +146,7 @@ export default function ServicePage() {
 
         <Clock
           size={18}
-          className="text-green-600"
+          className="text-emerald-600"
         />
 
         {center.slot}
@@ -157,7 +157,7 @@ export default function ServicePage() {
 
         <Calendar
           size={18}
-          className="text-green-600"
+          className="text-emerald-600"
         />
 
         Today
@@ -166,7 +166,7 @@ export default function ServicePage() {
 
     </div>
 
-    <button className="mt-6 rounded-2xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700">
+    <button className="mt-6 rounded-2xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700">
 
       Book Here
 

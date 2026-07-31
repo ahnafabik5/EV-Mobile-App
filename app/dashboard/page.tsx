@@ -153,21 +153,21 @@ export default function DashboardPage() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-green-500 hover:shadow-lg"
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition hover:-translate-y-1 hover:border-green-500 hover:shadow-lg"
               >
 
                 <Icon
                   size={32}
-                  className="text-green-600"
+                  className="text-emerald-600"
                 />
 
 
-                <h2 className="mt-4 text-lg font-semibold text-gray-900">
+                <h2 className="mt-4 text-lg font-semibold text-slate-900">
                   {item.title}
                 </h2>
 
 
-                <p className="mt-2 text-sm font-medium text-green-600">
+                <p className="mt-2 text-sm font-medium text-emerald-600">
                   Open →
                 </p>
 
@@ -186,7 +186,7 @@ export default function DashboardPage() {
         {/* Charging */}
 
 
-        <section className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm">
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-md">
 
 
           <h2 className="text-xl sm:text-2xl font-bold">
@@ -229,11 +229,11 @@ export default function DashboardPage() {
 
        {/* Insights */}
 
-<section className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6 shadow-sm">
+<section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-md">
 
   <details>
 
-    <summary className="cursor-pointer text-xl sm:text-2xl font-bold text-gray-900">
+    <summary className="cursor-pointer text-xl sm:text-2xl font-bold text-slate-900">
       Vehicle Insights
     </summary>
 
@@ -294,11 +294,11 @@ function Stat({
 
     <div className="text-center">
 
-      <h2 className="text-2xl font-bold text-green-600 sm:text-3xl">
+      <h2 className="text-2xl font-bold text-emerald-600 sm:text-3xl">
         {value}
       </h2>
 
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-slate-500">
         {title}
       </p>
 
@@ -322,17 +322,17 @@ function Station({
 
   return (
 
-    <div className="flex flex-col gap-4 rounded-2xl border border-gray-200 p-5 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 p-5 sm:flex-row sm:items-center sm:justify-between">
 
 
       <div>
 
-        <h3 className="font-bold text-gray-900">
+        <h3 className="font-bold text-slate-900">
           {name}
         </h3>
 
 
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-slate-500">
           {distance}
         </p>
 
@@ -343,14 +343,14 @@ function Station({
       <div className="sm:text-right">
 
 
-        <p className="text-sm font-semibold text-green-600">
+        <p className="text-sm font-semibold text-emerald-600">
           {status}
         </p>
 
 
         <Link
           href="/stations"
-          className="mt-3 inline-block rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white"
+          className="mt-3 inline-block rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white"
         >
           Reserve
         </Link>
@@ -379,7 +379,7 @@ function Insight({
 
   <div className="rounded-2xl bg-green-50 p-3">
 
-    <p className="text-sm text-gray-500">
+    <p className="text-sm text-slate-500">
       {title}
     </p>
 

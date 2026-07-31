@@ -94,13 +94,13 @@ export default function StationsPage() {
 
           <input
             placeholder="Search charging station..."
-            className="w-full rounded-2xl border border-gray-200 bg-white py-4 pl-12 pr-4 text-gray-800 outline-none focus:border-green-500"
+            className="w-full rounded-2xl border border-slate-200 bg-white py-4 pl-12 pr-4 text-slate-800 outline-none focus:border-green-500"
           />
                   </div>
 
         {/* Map */}
 
-        <section className="flex h-72 items-center justify-center rounded-[32px] border border-gray-200 bg-gradient-to-br from-green-50 to-emerald-100 shadow-xl">
+        <section className="flex h-72 items-center justify-center rounded-[32px] border border-slate-200 bg-gradient-to-br from-green-50 to-emerald-100 shadow-xl">
 
           <div className="text-center">
 
@@ -108,16 +108,16 @@ export default function StationsPage() {
 
               <MapPin
                 size={50}
-                className="text-green-600"
+                className="text-emerald-600"
               />
 
             </div>
 
-            <h2 className="mt-6 text-3xl font-bold text-gray-900">
+            <h2 className="mt-6 text-3xl font-bold text-slate-900">
               Bangladesh EV Charging Network
             </h2>
 
-            <p className="mt-3 text-lg text-gray-500">
+            <p className="mt-3 text-lg text-slate-500">
               Interactive Map Preview
             </p>
 
@@ -133,18 +133,18 @@ export default function StationsPage() {
 
             <div
               key={station.name}
-              className="rounded-[30px] border border-gray-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
+              className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-xl"
             >
 
               <div className="flex items-start justify-between">
 
                 <div>
 
-                  <h2 className="text-2xl font-bold text-gray-900">
+                  <h2 className="text-2xl font-bold text-slate-900">
                     {station.name}
                   </h2>
 
-                  <p className="mt-2 text-gray-500">
+                  <p className="mt-2 text-slate-500">
                     {station.area}
                   </p>
 
@@ -174,13 +174,13 @@ export default function StationsPage() {
 
             <div className="mt-8 flex gap-4">
 
-              <button className="rounded-2xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700">
+              <button className="rounded-2xl bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700">
 
                 Reserve Slot
 
               </button>
 
-              <button className="rounded-2xl border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 transition hover:border-green-500 hover:text-green-600">
+              <button className="rounded-2xl border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 transition hover:border-green-500 hover:text-emerald-600">
 
                 Directions
 

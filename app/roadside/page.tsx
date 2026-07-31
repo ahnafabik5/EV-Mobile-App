@@ -69,35 +69,35 @@ export default function RoadsidePage() {
 
         </button>
 
-        <button className="rounded-[30px] border border-gray-200 bg-white p-10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <button className="rounded-[30px] border border-slate-200 bg-white p-10 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
           <Phone
             size={42}
-            className="text-green-600"
+            className="text-emerald-600"
           />
 
-          <h2 className="mt-6 text-2xl font-bold text-gray-900">
+          <h2 className="mt-6 text-2xl font-bold text-slate-900">
             Call Support
           </h2>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-slate-500">
             24/7 customer assistance
           </p>
 
         </button>
 
-        <button className="rounded-[30px] border border-gray-200 bg-white p-10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <button className="rounded-[30px] border border-slate-200 bg-white p-10 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
           <MapPin
             size={42}
-            className="text-green-600"
+            className="text-emerald-600"
           />
 
-          <h2 className="mt-6 text-2xl font-bold text-gray-900">
+          <h2 className="mt-6 text-2xl font-bold text-slate-900">
             Share Location
           </h2>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-slate-500">
             Send live GPS coordinates
           </p>
 
@@ -107,16 +107,16 @@ export default function RoadsidePage() {
 
       {/* Request Summary */}
 
-      <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+      <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
         <div className="flex items-center gap-4">
 
           <CarFront
-            className="text-green-600"
+            className="text-emerald-600"
             size={32}
           />
 
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-slate-900">
             Request Summary
           </h2>
 
@@ -154,9 +154,9 @@ export default function RoadsidePage() {
 
       {/* Emergency Services */}
 
-      <section className="rounded-[32px] border border-gray-200 bg-white p-10 shadow-xl">
+      <section className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl">
 
-        <h2 className="text-3xl font-bold text-gray-900">
+        <h2 className="text-3xl font-bold text-slate-900">
           Available Emergency Services
         </h2>
 
@@ -192,13 +192,13 @@ function Row({
   value: string;
 }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
+    <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-gray-50 px-6 py-5 transition hover:border-green-300 hover:bg-green-50">
 
       <span className="text-lg font-semibold text-gray-700">
         {title}
       </span>
 
-      <span className="text-xl font-bold text-green-600">
+      <span className="text-xl font-bold text-emerald-600">
         {value}
       </span>
 
@@ -212,18 +212,18 @@ function Service({
   title: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
+    <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-md transition duration-300 hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
 
       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100">
 
         <ShieldAlert
           size={22}
-          className="text-green-600"
+          className="text-emerald-600"
         />
 
       </div>
 
-      <span className="text-lg font-semibold text-gray-800">
+      <span className="text-lg font-semibold text-slate-800">
         {title}
       </span>
 
