@@ -7,7 +7,9 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function DashboardLayout({ children }: Props) {
+export default function DashboardLayout({
+  children,
+}: Props) {
   return (
     <div className="min-h-screen bg-gray-100">
 
@@ -15,10 +17,20 @@ export default function DashboardLayout({ children }: Props) {
 
       <div className="mx-auto flex max-w-[1600px]">
 
-        <Sidebar />
+        {/* Desktop Sidebar */}
 
-        <main className="flex-1 overflow-y-auto p-8">
+        <aside className="hidden lg:block">
+
+          <Sidebar />
+
+        </aside>
+
+        {/* Main Content */}
+
+        <main className="min-w-0 flex-1 overflow-x-hidden p-4 sm:p-6 lg:p-8">
+
           {children}
+
         </main>
 
       </div>
