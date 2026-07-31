@@ -107,7 +107,7 @@ export default function DashboardPage() {
 
           {/* Stats */}
 
-          <div className="mt-8 grid grid-cols-2 gap-4 rounded-3xl bg-white p-5 shadow-xl md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-4 rounded-3xl bg-white p-5 shadow-xl md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
 
             <Stat
@@ -141,7 +141,7 @@ export default function DashboardPage() {
         {/* Actions */}
 
 
-        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
 
           {actions.map((item)=>{

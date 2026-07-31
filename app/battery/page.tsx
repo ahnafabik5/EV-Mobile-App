@@ -41,7 +41,7 @@ export default function BatteryPage() {
           Battery Health
         </p>
 
-        <h2 className="mt-3 text-7xl font-black">
+        <h2 className="mt-3 text-4xl sm:text-5xl lg:text-7xl font-black">
           92%
         </h2>
 

@@ -16,7 +16,7 @@ export default function FuelPage() {
 
         {/* Hero */}
 
-        <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-700 px-12 py-14 text-white shadow-2xl">
+        <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-green-500 via-emerald-500 to-green-700 px-4 sm:px-8 lg:px-12 py-14 text-white shadow-2xl">
 
           <div className="absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-white/10 blur-2xl"></div>
 
@@ -30,7 +30,7 @@ export default function FuelPage() {
                 Monthly Fuel Savings
               </p>
 
-              <h1 className="mt-2 text-8xl font-extrabold tracking-tight leading-none">
+              <h1 className="mt-2 text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight leading-none">
                 ৳6,300
               </h1>
 
@@ -56,7 +56,7 @@ export default function FuelPage() {
 
         {/* Stats */}
 
-        <div className="grid gap-6 grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 grid-cols-2 xl:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
           <Card
             icon={<Fuel className="text-orange-500" size={40} />}
